@@ -1,0 +1,39 @@
+<!DOCTYPE html><center>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="C:\Users\Josh\Desktop\Code\Surge\scripts\style.css">
+        <script src="scripts\java.js"></script>
+        <h1>Surge</h1>
+    </head>
+    <body onload="hidediv()">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div id="type">Incident Type</div>
+        <div id="location">Incident Location</div>
+        <div id="description">Incident Description</div>
+        <div id="brigades">Responding Brigades</div>
+        <span id="minutes"></span>:<span id="seconds"></span>
+
+        <div id="options">
+            <acceptbtn type="button" onclick="test()">Accept Callout</acceptbtn>
+            <denybtn type="button" onclick="test()">Accept Callout</denybtn>
+        </div>
+
+        <br>
+
+        <div id="testbutton">
+        <button type="button" onclick="test()">Test System</button>
+        </div>
+
+        <audio id="audioalert" src="audio/alert.mp3" preload="auto"></audio>
+
+    </body>
+</html>
