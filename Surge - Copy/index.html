@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="scripts/style.css">
+        <script src="scripts/main.js"></script>
+    </head>
+
+    <header>
+        <heading class="title">Surge </heading>        
+        
+        <!Div for date>
+        <div class="date" id="date"></div> 
+    </header>
+
+    <center>
+
+    <body onload="hidediv(); date()">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!Div for date>
+        <div id="date"></div> <br>
+
+        <!Incident Information divs>
+        <div id="type">Incident Type</div>
+        <div id="location">Incident Location</div>
+        <div id="description">Incident Description</div>
+        <div id="brigades">Responding Brigades</div>
+        
+        <!div contains accept / deny button options>
+        <div id="options">
+            <button type="button" class="acceptbutton" onclick="accept()">Accept Callout</button>
+            <button type="button" class="denybutton" onclick="deny()">Deny Callout</button>
+        </div>
+
+        <br>
+
+        <!Div contains the testing button>
+        <div id="testbutton">
+            <button onclick="document.getElementById('modal-wrapper').style.display='block'" class="testbutton">Test System</button>
+        </div>
+
+        <!Audio alert sound>
+        <audio id="audioalert" src="audio/alert.mp3" preload="auto"></audio>
+
+
+        <!The below is the test system pop up box>
+        <div id="modal-wrapper" class="modal">
+            <form class="modal-content animate" action="/action_page.php">
+        
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close System Test">&times;</span>
+                <h1 style="text-align:center">System Test Setup</h1>
+            </div>
+
+            <div class="container"> <br>
+                <b>System Test Information</b> <br>
+                <input type="text" placeholder="Incident Type" id="testtype" > <br>
+                <input type="text" placeholder="Incident Location" id="testlocation"> <br>
+                <input type="text" placeholder="Incident Description" id="testdescription"> <br>
+                <input type="text" placeholder="Responding Brigades" id="testbrigades"> <br> <br>
+                <b>System Test Delay (Milliseconds)</b> <br>
+                <input type="number" placeholder="Delay" id="testdelay"> <br> <br>
+                <button type="button" class="starttestbutton" onclick="test()" >Start Test</button> <br> <br>
+            </div>
+            </form>
+        </div>
+
+
+
+    </body>
+</html>
